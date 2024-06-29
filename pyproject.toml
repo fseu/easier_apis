@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools-rust>=1.5.2"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "easier_apis"
+version = "0.1.0"
+description = "A Python framework for simplified API interactions"
+authors = [{name = "Faseeu", email = "faseu92@gmail.com"}]
+license = {file = "LICENSE"}
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/easier_apis"
+"Bug Tracker" = "https://github.com/yourusername/easier_apis/issues"
+
+[tool.setuptools.packages.find]
+include = ["easier_apis*"]
+
+[tool.setuptools_rust]
+rust-extensions = [
+    {path = ".", binding = "cffi"}
+]
